@@ -1,7 +1,7 @@
 name: 'test apply'
 
 on:
-  push:
+  pull-request:
     branches:
       - main
 
@@ -14,5 +14,6 @@ jobs:
     steps:
       - name: abc
         run: |
-          echo ${{ BRANCH_NAME }}
+          echo ${{ echo ${GITHUB_REF#refs/heads/} }}
           echo ${{ github.ref.name }}
+          echo ${{ ${GITHUB_REF#refs/heads/} }}
