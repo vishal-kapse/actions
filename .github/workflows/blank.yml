@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: abc
         run: |
-          echo $BRANCH_NAME
+          echo ${{ BRANCH_NAME }}
           echo ${{ github.ref.name }}
