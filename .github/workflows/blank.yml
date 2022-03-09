@@ -9,6 +9,7 @@ env:
   BRANCH: abc
 jobs:
   test-job:
+    runs-on: ubuntu-latest
     name: "extract branch name"
     steps:
       - name: abc
