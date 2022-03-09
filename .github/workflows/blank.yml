@@ -15,4 +15,8 @@ jobs:
       - name: abc
         run: |
           echo ${{ github.ref.name }}
-          echo ${{ ${GITHUB_REF#refs/heads/} }}
+          echo ${{ github.ref }}
+          echo ${{ github.ref.protected }}
+          echo ${{ github.job }}
+          echo ${{ github.head.ref }}
+          echo ${{ github.action }}
