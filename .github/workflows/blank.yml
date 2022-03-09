@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: abc
         run: |
-          echo ${{ github.ref }}
+          echo ${{ github.ref#refs/heads/ }}
           echo ${{ github.ref.name }}
